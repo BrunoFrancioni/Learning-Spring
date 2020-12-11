@@ -19,13 +19,13 @@
 	<!-- Inyecting dependencies -->
 	<!-- Using constructor -->
 
-	<bean id="directorEmployee" class="com.IoC.DirectorEmployee">
+	<bean id="directorEmployee" class="com.IoC.DirectorEmployee" init-method="init" destroy-method="destroy">
 		<constructor-arg ref="myReport"></constructor-arg>
 		<property name="email" value="${email_director}"></property>
 		<property name="companyName" value="${companyName}"></property>
 	</bean>
 	
-	<bean id="bossEmployee" class="com.IoC.BossEmployee">
+	<bean id="bossEmployee" class="com.IoC.BossEmployee" scope="prototype">
 		<constructor-arg ref="myReport"></constructor-arg>
 	</bean>
 	

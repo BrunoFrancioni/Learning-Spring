@@ -20,6 +20,18 @@ public class DirectorEmployee implements Employees {
 		return "Report created by the Director: " + newReport.getReport();
 	}
 	
+	// Init method
+	
+	public void init() {
+		System.out.println("Init method. Here we can define all the methods to execute before the bean is ready.");
+	}
+	
+	// Destroy method
+	
+	public void destroy() {
+		System.out.println("Destoy method. Here we can define all the method to execute after the bean is not longer used.");
+	}
+	
 	public String getEmail() {
 		return email;
 	}
