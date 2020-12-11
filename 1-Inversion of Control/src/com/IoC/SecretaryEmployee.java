@@ -1,6 +1,8 @@
 package com.IoC;
 
 public class SecretaryEmployee implements Employees {
+	private String email;
+	private String companyName;
 	private ReportsCreation newReport;
 	
 	@Override
@@ -12,6 +14,22 @@ public class SecretaryEmployee implements Employees {
 	public String getReport() {
 		// TODO Auto-generated method stub
 		return "Report created by the Secretary: " + newReport.getReport();
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
 	}
 
 	public ReportsCreation getNewReport() {
