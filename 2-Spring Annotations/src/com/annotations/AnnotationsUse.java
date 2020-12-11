@@ -36,6 +36,15 @@ public class AnnotationsUse {
 		
 		if(Lucy != Mason) System.out.println("Lucy: " + Lucy + "\nMason: " + Mason);
 		
+		// @Bean to configure
+		
+		Employees Joy = context.getBean("financialDirector", FinancialDirector.class);
+		
+		System.out.println("JOY");
+		System.out.println(Joy.getTasks());
+		System.out.println(Joy.getReport());
+		System.out.println("\n");
+		
 		
 		context.close();
 	}
