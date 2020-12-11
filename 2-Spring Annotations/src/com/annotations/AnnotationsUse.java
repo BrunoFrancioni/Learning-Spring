@@ -11,6 +11,9 @@ public class AnnotationsUse {
 		Employees Carl = context.getBean("intermediateCommercial", IntermediateCommercial.class);
 		Employees Anton = context.getBean("experiencedCommercial", ExperiencedCommercial.class);
 		
+		
+		// @Autowired and @Qualifier
+		
 		System.out.println("ANA");
 		System.out.println(Ana.getTasks());
 		System.out.println(Ana.getReport());
@@ -25,6 +28,13 @@ public class AnnotationsUse {
 		System.out.println(Anton.getTasks());
 		System.out.println(Anton.getReport());
 		System.out.println("\n");
+		
+		// @Scope for singleton and prototype
+		
+		Employees Lucy = context.getBean("experiencedCommercial", ExperiencedCommercial.class);
+		Employees Mason = context.getBean("experiencedCommercial", ExperiencedCommercial.class);
+		
+		if(Lucy != Mason) System.out.println("Lucy: " + Lucy + "\nMason: " + Mason);
 		
 		
 		context.close();

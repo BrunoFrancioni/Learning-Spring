@@ -2,9 +2,11 @@ package com.annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("experiencedCommercial")
+@Scope("prototype")
 public class ExperiencedCommercial implements Employees {
 	@Qualifier("financialReportTrim3")
 	private CreationFinancialReport financialReportTrim3;
