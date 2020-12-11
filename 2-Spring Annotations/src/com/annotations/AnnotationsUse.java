@@ -38,11 +38,13 @@ public class AnnotationsUse {
 		
 		// @Bean to configure
 		
-		Employees Joy = context.getBean("financialDirector", FinancialDirector.class);
+		FinancialDirector Joy = context.getBean("financialDirector", FinancialDirector.class);
 		
 		System.out.println("JOY");
 		System.out.println(Joy.getTasks());
 		System.out.println(Joy.getReport());
+		System.out.println(Joy.getEmail());
+		System.out.println(Joy.getCompanyName());
 		System.out.println("\n");
 		
 		
