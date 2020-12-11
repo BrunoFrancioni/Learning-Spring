@@ -1,18 +1,19 @@
 package com.annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("experiencedCommercial")
 public class ExperiencedCommercial implements Employees {
-	private CreationFinancialReport financialReportTrim1;
-
+	@Qualifier("financialReportTrim3")
+	private CreationFinancialReport financialReportTrim3;
 	
 	// Inyecting dependency using constructor 
 	@Autowired
-	public ExperiencedCommercial(CreationFinancialReport financialReportTrim1) {
+	public ExperiencedCommercial(CreationFinancialReport financialReportTrim3) {
 		super();
-		this.financialReportTrim1 = financialReportTrim1;
+		this.financialReportTrim3 = financialReportTrim3;
 	}
 
 	@Override
@@ -22,6 +23,6 @@ public class ExperiencedCommercial implements Employees {
 
 	@Override
 	public String getReport() {
-		return financialReportTrim1.getFinancialReport();
+		return financialReportTrim3.getFinancialReport();
 	}
 }

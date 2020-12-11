@@ -1,16 +1,18 @@
 package com.annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("intermediateCommercial")
 public class IntermediateCommercial implements Employees {
-	private CreationFinancialReport financialReportTrim1;
+	private CreationFinancialReport financialReportTrim2;
 	
 	// Inyecting dependency using setter 
 	@Autowired
-	public void setFinancialReportTrim1(CreationFinancialReport financialReportTrim1) {
-		this.financialReportTrim1 = financialReportTrim1;
+	@Qualifier("financialReportTrim2")
+	public void setFinancialReportTrim1(CreationFinancialReport financialReportTrim2) {
+		this.financialReportTrim2 = financialReportTrim2;
 	}
 	
 	@Override
@@ -20,7 +22,7 @@ public class IntermediateCommercial implements Employees {
 
 	@Override
 	public String getReport() {
-		return financialReportTrim1.getFinancialReport();
+		return financialReportTrim2.getFinancialReport();
 	}
 
 }
