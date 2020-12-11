@@ -13,6 +13,7 @@ public class EmployeeUse {
 		
 		// 3- Use the object
 		System.out.println(Carl.getTasks());
+		System.out.println(Carl.getReport());
 		
 		// 4- Close the context and free resources
 		context.close();

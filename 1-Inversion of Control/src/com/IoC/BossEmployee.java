@@ -5,4 +5,10 @@ public class BossEmployee implements Employees {
 	public String getTasks() {
 		return "I manage all the stuff related to my employees";
 	}
+
+	@Override
+	public String getReport() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
