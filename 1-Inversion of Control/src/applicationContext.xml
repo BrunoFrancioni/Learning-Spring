@@ -14,6 +14,7 @@
 	</bean>
 	
 	<!-- Inyecting dependencies -->
+	<!-- Using constructor -->
 
 	<bean id="directorEmployee" class="com.IoC.DirectorEmployee">
 		<constructor-arg ref="myReport"></constructor-arg>
@@ -23,8 +24,10 @@
 		<constructor-arg ref="myReport"></constructor-arg>
 	</bean>
 	
+	<!-- Using setters -->
+	
 	<bean id="secretaryEmployee" class="com.IoC.SecretaryEmployee">
-		<constructor-arg ref="myReport"></constructor-arg>
+		<property name="newReport" ref="myReport"></property>
 	</bean>
 
 </beans>
