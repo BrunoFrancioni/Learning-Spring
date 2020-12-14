@@ -12,7 +12,6 @@ public class SecretaryEmployee implements Employees {
 
 	@Override
 	public String getReport() {
-		// TODO Auto-generated method stub
 		return "Report created by the Secretary: " + newReport.getReport();
 	}
 	

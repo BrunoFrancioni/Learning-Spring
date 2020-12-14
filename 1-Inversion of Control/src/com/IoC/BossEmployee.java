@@ -14,7 +14,6 @@ public class BossEmployee implements Employees {
 
 	@Override
 	public String getReport() {
-		// TODO Auto-generated method stub
 		return "Report created by the Boss: " + newReport.getReport();
 	}
 }
