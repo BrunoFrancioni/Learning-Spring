@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<h1>Hola ${ param.name } welcome</h1>
+	<h1>Hola ${ name } welcome</h1>
 	
 	
 </body>

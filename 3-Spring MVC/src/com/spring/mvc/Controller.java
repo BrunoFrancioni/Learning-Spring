@@ -1,5 +1,8 @@
 package com.spring.mvc;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @org.springframework.stereotype.Controller
@@ -15,7 +18,9 @@ public class Controller {
 	}
 	
 	@RequestMapping("/processForm")
-	public String processForm() {
+	public String processForm(HttpServletRequest request, Model model) {
+		model.addAttribute("name", request.getParameter("name"));
+		
 		return "processForm";
 	}
 }
