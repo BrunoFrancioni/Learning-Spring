@@ -4,14 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Example Page</title>
+<title>Student Registration Confirmation</title>
 </head>
 
 <body>
-	<h1>This is the system</h1>
-	
-	<a href="showForm">Go to the form</a>
-	
-	<a href="student/showForm">Got to the student form</a>
+	<h2>The student ${ student.name } ${ student.lastname } has been registered sucessfully</h2>
 </body>
 </html>
